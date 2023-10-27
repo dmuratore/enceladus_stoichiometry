@@ -40,7 +40,7 @@ mortality_plot<-ggplot(chemostat_biomass_data)+
   geom_point(aes(y=1/`Flow (Mortality) Rate (same units as growth rate)`,
                     x=`Steady State Biomass (cells/ml)`,
                  col=p_molar))+
-  scale_y_log10(name='Cell Turnover Time [hr(?)]')+
+  scale_y_log10(name='Cell Turnover Time')+
   scale_x_log10(name='Steady State Cells/mL')+
   cmocean::scale_color_cmocean(name='thermal',trans='log10',direction=1)+
   guides(color=guide_colorbar(title='Dissolved PO4\nConcentration [M]',
